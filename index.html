@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starlight hub</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+    <header>
+        <a href="login.html" class="logo">Starlight</a>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Works</a></li>
+            <li><a href="#">Contacts</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="images/stars.png" id="stars">
+        <img src="images/moon.png" id="moon">
+        <img src="images/mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Starlight</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="images/mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Starlight: Navigating the Wonders of Space</h2>
+        <p>
+           <br>Welcome, celestial explorers, to the ever-expanding universe of Starlight Odyssey. In this digital cosmos, we invite you to immerse yourself in the boundless wonders of space—an odyssey that seamlessly weaves together comprehensive astronomical insights and delightful, engaging content. As we chart our course through the celestial expanse, we embark on a journey that goes beyond the traditional confines of space exploration. Starlight Odyssey is not merely a source of information; it is a cosmic playground where the joy of discovery meets the marvels of the universe. <br> <br>
+
+           At the heart of our mission is a dedication to demystifying the complexities of the cosmos, making them accessible to all who seek knowledge and inspiration. Each article within our celestial library is crafted to unfold captivating narratives about galaxies, planets, and stellar phenomena. Through a meticulous blend of scientific rigor and accessible language, we endeavor to empower both seasoned astronomers and those new to the wonders of space with a deeper understanding of the universe. <br><br>
+           
+           But our odyssey doesn't stop at education. It extends into the realm of enjoyment, offering an interactive experience that transcends traditional learning. From awe-inspiring images captured by space telescopes to light-hearted quizzes designed to tickle your astronomical curiosity, every corner of our digital universe is designed to foster a sense of wonder and joy. We believe that learning about space should not only be informative but also entertaining—a sentiment that resonates in every pixel of Starlight Odyssey. <br><br>
+           
+           As we navigate the vastness of space, we're thrilled to introduce features that elevate your cosmic journey even further. Picture yourself at the helm of a spaceship, embarking on a simulated spacewalk, or challenge your knowledge with mind-bending puzzles designed to stimulate your astronomical intellect. Our commitment to delivering a dynamic and engaging experience extends beyond the digital frontier, encouraging connections and interactions among the space-curious community through forums and discussions. <br><br>
+           
+           But what lies ahead in the cosmic trajectory of Starlight Odyssey? Brace yourselves for an odyssey that extends into the future, embracing the latest breakthroughs, futuristic technologies, and the evolving narratives of space exploration. Journey with us as we explore groundbreaking missions, witness the birth of new celestial phenomena, and delve into the evolving tales of the universe. The vast expanse of space is our playground, and the possibilities for exploration are limitless. <br><br>
+           
+           As we fasten our seatbelts and prepare for liftoff into the future, anticipate regularly updated content that keeps pace with the ever-evolving field of space exploration. Join us for live streams of celestial events, interactive experiences that bring you closer to the cosmos, and collaborations with experts who share their insights and passion for the unknown. Starlight Odyssey is not just a website; it is a dynamic, living entity that mirrors the dynamic nature of the universe itself. <br><br>
+           
+           In conclusion, Starlight Odyssey is your passport to an odyssey that extends beyond the horizon of knowledge, blending the informative with the thrilling, the educational with the entertaining. Whether you are a seasoned space enthusiast or a curious explorer taking your first steps into the cosmos, we invite you to join us on this celestial journey. Starlight Odyssey: where space exploration meets the infinite possibilities of the future, and the odyssey continues to unfold
+
+        </p>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="icon"><ion-icon name="earth-outline"></ion-icon>
+            </div>
+            <div class="content">
+                <h2>Moon 2</h2>
+                <p>
+                    Did you know that Earth has a second, mini-moon that occasionally pays us a visit? Known as a "quasi-satellite," this celestial companion is called 2020 SO. Discovered in September 2020, 2020 SO entered Earth's orbit but is not a natural moon; instead, it's likely a discarded rocket booster from a lunar mission launched in the 1960s.
+                </p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card">
+                <div class="icon"><ion-icon name="rocket-outline"></ion-icon>
+                </div>
+                <div class="content">
+                    <h2>Saturn V</h2>
+                    <p>One of the most powerful rockets ever built is the Saturn V, developed by NASA for the Apollo and Skylab programs. What's intriguing is the sheer scale of its engines. The five engines of the Saturn V's first stage, known as the F-1 engines, were the largest single-chamber liquid-fueled rocket engines ever used in operational service.</p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="card">
+                    <div class="icon"><ion-icon name="planet-outline"></ion-icon>
+                    </div>
+                    <div class="content">
+                        <h2>WASP-12b</h2>
+                        <p>One of the strangest planets ever discovered is known as "WASP-12b." This exoplanet, located about 1,400 light-years away from Earth, is so close to its host star that it's literally being consumed. WASP-12b is spiraling in towards its star, and the intense gravitational forces are causing the planet to stretch and deform into an egg-like shape.</p>
+                    </div>
+                </div>
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+
+
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px'
+            moon.style.top = value * 1.05 + 'px'
+            mountains_behind.style.top = value * 0.5 + 'px'
+            mountains_front.style.top = value * 0 + 'px'
+            text.style.marginRight = value * 0 + 'px' 
+            text.style.marginTop = value * 1.5 + 'px' 
+            btn.style.marginTop = value * 1.5 + 'px' 
+            header.style.top = value * 0.5 + 'px'
+        })
+        
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+</body>
+</html>
